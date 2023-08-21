@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/btnStyle.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/registerBtn.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/hamburgerMenu.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/navStyle.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/NatureNexus.styles.css" asp-append-version="true" />
+</head>
+<body >
+            <header class="header">
+        @*Header Logo*@
+    <div class="header-logo">
+                    <img src="~/assets/images/logo2.png" width="80" />
+                </div>
+        @*Header Mobile Navigation*@
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <!-- Hamburger menu lines  -->
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <!-- mobile menu -->
+                <ul id="menu">
+                    <a href="#">
+                    <li>Anasayfa</li></a>
+                    <a href="#">
+                    <li>Hakkında</li></a>
+                    <a href="#">
+                    <li>Gezilecek Yerler</li></a>
+                    <a href="#">
+                    <li>İletişim</li></a>
+                </ul>
+            </div>  
+        </nav>
+        @*Header Desktop Navigation*@
+        <nav class="nav">
+            <a href="#">Anasayfa</a>
+            <a href="#">Hakkında</a>
+            <a href="#">Gezilecek Yerler</a>
+            <a href="#">İletişim</a>
+            <div id="indicator"></div>
+        </nav>
+        <ul class="register nav">
+            <li>
+                <a class="" href="#">Login</a> 
+            </li>
+            <li>
+                <a class="" href="#">SignUp</a>
+            </li>
+        </ul>
+            </header>
+
+    
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - NatureNexus - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

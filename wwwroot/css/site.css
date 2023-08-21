@@ -1,0 +1,58 @@
+﻿:root {
+    --clr-1: #001C30;
+    --clr-2: #F6FBF4;
+    --clr-3: #AA8B56;
+    --clr-4: #ECD662;
+    --clr-5: #5E8B7E;
+    --clr-6: #E86A33;
+}
+
+
+html {
+    font-size: 14px;
+}
+
+body {
+    background-color: var(--clr-2);
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.header {
+    background-color: var(--clr-1);
+    display: flex;
+    padding: 10px 20px;
+    position: fixed;
+    right: 0;
+    height: 80px;
+    left: 0;
+    top: 0;
+    justify-content: space-between;
+}
+
+.header-logo img {
+    position: absolute;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all ease-out 200ms;
+}
+
+    .header-logo img:hover {
+        width: 83px;
+    }
+
+.container {
+    margin-top: 100px;
+}
+
+/*-------------------------*/
+
