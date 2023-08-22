@@ -1,22 +1,37 @@
 ﻿:root {
-    --clr-1: #001C30;
-    --clr-2: #F6FBF4;
-    --clr-3: #AA8B56;
-    --clr-4: #ECD662;
-    --clr-5: #5E8B7E;
-    --clr-6: #E86A33;
+    --clr-main: #388E3C;
+    --clr-header: #064635;
+    --clr-bg-main: #F1FDF3;
+    --clr-textDark: #616161;
+    --clr-textWhite: #F1FDF3;
+    --clr-textBtn: #D8B384;
+    --clr-btn: #E86A33;
+    --clr-bg: #FAF1E6;
+    --clr-bg2: #EFFCEF;
 }
-
+/*
+Ana Renk (Logo Renk) - Orman Yeşili: #388E3C
+Ana Tema Rengi - Gece Mavisi: #1565C0
+Dikkat Çeken Rengi - Amber: #FFA000
+Metin ve Arka Plan - Koyu Gri Tonu: #616161
+Buton Rengi - Menekşe Moru: #9C27B0
+Arka Plan - Kömür Siyahı: #212121
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 html {
     font-size: 14px;
 }
 
 body {
-    background-color: var(--clr-2);
+    background-color: var(--clr-bg-main);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
     html {
         font-size: 16px;
     }
@@ -27,32 +42,85 @@ html {
     min-height: 100%;
 }
 
+/*----------------------HEADER----------------------------*/
 .header {
-    background-color: var(--clr-1);
+    background-color: var(--clr-header);
     display: flex;
     padding: 10px 20px;
     position: fixed;
     right: 0;
-    height: 80px;
+    height: 60px;
     left: 0;
     top: 0;
     justify-content: space-between;
 }
 
 .header-logo img {
+    width: 70px;
+    height: 60px;
     position: absolute;
     cursor: pointer;
     overflow: hidden;
+    padding-bottom: 1em;
     transition: all ease-out 200ms;
 }
 
     .header-logo img:hover {
-        width: 83px;
+        scale: 1.1;
     }
+/*----------------------MAIN----------------------------*/
 
 .container {
     margin-top: 100px;
 }
 
-/*-------------------------*/
+/*----------------FOOTER---------------------------------*/
+.mainfooter {
+    display: flex;
+    background-color: var(--clr-bg-main);
+    border-top: solid 1px lightgray;
+}
 
+
+.footerLogo {
+    padding: 2em 5.3em 2em 1.3em;
+    border-right: solid 1px var(--clr-header);
+}
+
+@media screen and (max-width:900px) {
+    .footerLogo img {
+        width: 50px !important;
+        height: 40px !important;
+    }
+}
+
+.footerLogo img {
+    width: 140px;
+    height: 70px;
+}
+
+.footerNav {
+    padding: 1em;
+    height: 100%;
+    overflow: hidden;
+    padding-inline: 5em;
+    border-right: solid 1px var(--clr-header);
+    display: flex;
+    flex-direction: column;
+}
+
+    .footerNav a {
+        padding-block: .2em;
+        text-decoration: none;
+        color: var(--clr-textDark) !important;
+        display: inline-block;
+    }
+
+        .footerNav a:hover {
+            color: var(--clr-textBtn) !important;
+            border-bottom: 1px solid var(--clr-textBtn)
+        }
+
+.footerContact {
+    background-color: lightgreen;
+}

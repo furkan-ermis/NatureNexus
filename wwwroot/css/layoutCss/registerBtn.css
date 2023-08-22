@@ -1,0 +1,24 @@
+﻿.register li:last-child a {
+    margin-left: 10px;
+    color: var(--clr-btn) !important;
+    border-radius: 4px;
+    padding: 8px 20px !important;
+    border: solid .2em var(--clr-btn);
+}
+
+    .register li:last-child a:hover {
+        color: var(--clr-textWhite) !important;
+        background-color: var(--clr-btn) !important;
+    }
+
+.register li:first-child a {
+    color: var(--clr-textBtn) !important;
+    border-radius: 4px;
+    padding: 8px 20px !important;
+    border: solid .2em var(--clr-textBtn);
+}
+
+    .register li:first-child a:hover {
+        color: var(--clr-header) !important;
+        background-color: var(--clr-textBtn) !important;
+    }
