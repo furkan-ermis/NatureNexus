@@ -1,0 +1,62 @@
+﻿
+
+
+.main {
+    outline: none;
+    background-image: url("https://images.unsplash.com/photo-1516528387618-afa90b13e000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    margin-block: 3em;
+    color: var(--clr-bg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: none;
+    justify-content: center;
+}
+
+h1, h3, h5 {
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: .6em .3em;
+    margin-top: .7em !important;
+    border: 1px solid rgba(230,230,230,.8);
+    background-color: transparent;
+}
+
+.contactBox {
+    z-index: 1;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+    box-shadow: 3px 6px 20px 10px rgba(0,0,0,0.3);
+}
+
+.formBtn {
+    background-color: var(--clr-btn);
+    padding: .8em 1.7em;
+    width: 120px;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px -1px 14px 4px rgba(0,0,0,.5);
+    opacity: .7;
+    margin-bottom: 1em;
+    transition: all 200ms;
+}
+
+    .formBtn:is(:hover,:focus) {
+        opacity: .8;
+        box-shadow: 3px -1px 14px 2px rgba(240,240,240,.3);
+    }

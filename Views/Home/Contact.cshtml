@@ -1,7 +1,36 @@
 ﻿
 @{
     ViewData["Title"] = "Contact";
+    ViewData["Style"] = "Contact.css";
 }
+<div class="wrapper">
+<div class="contactBox"style="padding-inline:1em;">
 
-<h1>Contact</h1>
+        <h1>Contact US</h1>
+        <h3>ISTANBUL</h3>
+        <h5>
+            Söğütlü Çeşme Cd, <br />34714 Kadıköy/İstanbul
+        </h5>
+        <h5>(555) 345-6789</h5>
+        <form asp-action="" id="">
+            <div asp-validation-summary="ModelOnly" style="color:red;font-size:7px;"></div>
 
+            <div class="field">
+                <input type="text" placeholder="Adınızı Giriniz" />
+                <span style="color:red;font-size:7px;"></span>
+            </div>
+            <div class="field">
+                <input type="text" placeholder="Mail Adresinizi Giriniz" />
+                <span style="color:red;font-size:7px;"></span>
+            </div>
+            <div class="field">
+                <textarea rows="4" cols="50" placeholder="Mesajınızı Giriniz..."></textarea>
+                <span style="color:red;font-size:7px;"></span>
+            </div>
+            <div class="field">
+                <input type="submit" class="formBtn" value="Gönder"/>
+                <span style="color:red;font-size:7px;"></span>
+            </div>
+        </form>
+</div>
+</div>

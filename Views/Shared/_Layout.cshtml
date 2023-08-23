@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/@ViewData["Style"]" asp-append-version="true" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/btnStyle.css" asp-append-version="true" />
@@ -20,11 +21,11 @@
 
 </head>
 <body >
-            <header class="header">
+    <header class="header">
         @*Header Logo*@
-    <div class="header-logo">
+    <a class="header-logo" asp-action="Index" asp-controller="Home">
                     <img src="~/assets/images/logowhite.png"  />
-                </div>
+    </a>
         @*Header Mobile Navigation*@
         <nav role="navigation">
             <div id="menuToggle">
@@ -36,44 +37,40 @@
 
                 <!-- mobile menu -->
                 <ul id="menu">
-                    <a href="#">
+                    <a asp-action="Index" asp-controller="Home">
                     <li>Anasayfa</li></a>
-                    <a href="#">
+                    <a asp-action="About" asp-controller="Home">
                     <li>Hakkında</li></a>
-                    <a href="#">
+                    <a asp-action="Index" asp-controller="Destination">
                     <li>Gezilecek Yerler</li></a>
-                    <a href="#">
+                    <a asp-action="Contact" asp-controller="Home">
                     <li>İletişim</li></a>
                 </ul>
             </div>  
         </nav>
         @*Header Desktop Navigation*@
         <nav class="nav ">
-            <a href="#">Anasayfa</a>
-            <a href="#">Hakkında</a>
-            <a href="#">Gezilecek Yerler</a>
-            <a href="#">İletişim</a>
+            <a asp-action="Index" asp-controller="Home">Anasayfa</a>
+            <a asp-action="About" asp-controller="Home">Hakkında</a>
+            <a asp-action="Index" asp-controller="Destination">Gezilecek Yerler</a>
+            <a asp-action="Contact" asp-controller="Home">İletişim</a>
             <div id="indicator"></div>
         </nav>
         <ul class="registerBtn">
             <li>
-                <a class="regbtn regbtn-fill fill">Login</a> 
+                <a class="regbtn regbtn-fill fill" asp-action="LogIn" asp-controller="Register">Login</a>
             </li>
             <li>
-                <a class="regbtn regbtn-close close" href="#">SignUp</a>
+                <a class="regbtn regbtn-close close" asp-action="SignUp" asp-controller="Register">SignUp</a>
             </li>
         </ul>
             </header>
 
-    
-
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div class="wrapper">
+        <main role="main" class="main pb-3" >
             @RenderBody()
         </main>
     </div>
-
-
     <footer class="sidefooter">
         <section>
             <p>
@@ -82,21 +79,30 @@
             </p>
         </section>
         <section>
-            <input type="search" placeholder="Email Adresinizi Giriniz"/><span><a  href="#" class="fas fa-search" ></a></span>
+            <input type="search" placeholder="Email Adresinizi Giriniz" /><div style="display:inline-block">
+                <a id="sendHelp"  class="mailIcon fa-solid fa-envelope-circle-check"></a> 
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <span class="close-popUp">&times;</span>
+                        <p>I need assistance!</p>
+                        <button id="closePopup">Close</button>
+                    </div>
+                </div>
+            </div>
         </section>
     </footer>
     <footer class="mainfooter">
         <section class="footerLogo">
-            <a href="#">
+            <a asp-action="Index" asp-controller="Home">
                 <img src="~/assets/images/logoblack.png" />
             </a>
         </section>
         <section class="footerNav">
             <ul>
-                <li><a class="animateBottomLine" href="#">Anasayfa</a></li>
-                <li><a class="animateBottomLine" href="#">Hakkında</a></li>
-                <li> <a class="animateBottomLine" href="#">Gezilecek Yerler</a></li>
-                <li> <a class="animateBottomLine" href="#">İletişim</a></li>
+                <li><a class="animateBottomLine" asp-action="Index" asp-controller="Home">Anasayfa</a></li>
+                <li><a class="animateBottomLine" asp-action="About" asp-controller="Home">Hakkında</a></li>
+                <li> <a class="animateBottomLine" asp-action="Index" asp-controller="Destination">Gezilecek Yerler</a></li>
+                <li> <a class="animateBottomLine" asp-action="Contact" asp-controller="Home">İletişim</a></li>
             </ul>
         </section>
         <section >
@@ -114,8 +120,6 @@
 <div class="m-4">
         </div>
     </footer>
-
-
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -138,6 +142,20 @@
 
             // 1 saniyede bir tarih ve saat güncellemesi yap
             setInterval(updateCurrentDate, 1000);
+        });
+    </script>
+    <script>
+        $("#sendHelp").click(function () {
+            $("#popup").fadeIn();
+            $(".header,.mainfooter").css("display","none");
+        });
+
+        $(".close-popUp, #closePopup, #popup").click(function (e) {
+            if (e.target === this || $(e.target).hasClass("close") || $(e.target).attr("id") === "closePopup") {
+                $("#popup").fadeOut();
+                $(".header,.mainfooter").css("display", "flex");
+
+            }
         });
     </script>
 </body>

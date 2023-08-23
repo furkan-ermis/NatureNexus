@@ -53,20 +53,21 @@ html {
 
 /*----------------------HEADER----------------------------*/
 .header {
+    z-index: 2;
     background-color: var(--clr-header);
     display: flex;
     padding: 10px 20px;
     position: fixed;
     right: 0;
-    height: 60px;
+    height: 70px;
     left: 0;
     top: 0;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .header-logo img {
-    width: 70px;
-    height: 60px;
+    width: 90px;
+    height: 70px;
     position: absolute;
     cursor: pointer;
     overflow: hidden;
@@ -106,6 +107,7 @@ html {
 
         .sidefooter section:last-child {
             opacity: .6;
+            width: 290px;
             padding-right: 1em;
             background-color: var(--clr-textWhite);
         }
@@ -115,19 +117,60 @@ html {
             }
 
         .sidefooter section input {
-            padding: 1em 2em;
+            padding: 1.1em 2em;
+            width: 250px;
+            margin: 0 !important;
+            line-height: 1;
             border: none;
             outline: none;
             background-color: transparent;
         }
 
-            .sidefooter section input ~ span > a {
-                color: var(--clr-btn);
-            }
+.mailIcon {
+    color: var(--clr-btn) !important;
+    cursor: pointer;
+}
 
-                .sidefooter section input ~ span > a:is(:hover,:focus) {
-                    color: var(--clr-textBtn);
-                }
+    .mailIcon:is(:hover,:focus) {
+        color: var(--clr-textBtn);
+        font-size: 1.1em;
+    }
+
+/*----------------SIDE - FOOTER - POPUP------------------*/
+.popup {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 111;
+}
+
+.popup-content {
+    background-color: white;
+    width: 50%;
+    margin: 10% auto;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 11;
+}
+
+.close-popUp {
+    z-index: 11;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#closePopup {
+    z-index: 11;
+    margin-top: 10px;
+}
 /*----------------FOOTER---------------------------------*/
 .mainfooter {
     display: flex;
@@ -139,6 +182,19 @@ html {
 }
 
 @media screen and (max-width:900px) {
+    .header {
+        justify-content: space-between;
+    }
+
+    .header-logo img {
+        width: 75px !important;
+        height: 55px !important;
+    }
+
+    .header {
+        height: 55px !important;
+    }
+
     .mainfooter {
         display: block;
     }

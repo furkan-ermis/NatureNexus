@@ -10,24 +10,24 @@
 
 .fill:hover,
 .fill:focus {
-    box-shadow: inset 0 0 0 2em var(--clr-textBtn);
+    box-shadow: inset 0 0 0 .8em var(--clr-textBtn);
 }
 
 .close:hover,
 .close:focus {
-    box-shadow: inset -3.5em 0 0 0 var(--clr-btn), inset 3.5em 0 0 0 var(--clr-btn);
+    box-shadow: inset -2.3em 0 0 0 var(--clr-btn), inset 2.3em 0 0 0 var(--clr-btn);
 }
 
 .regbtn-close {
     color: var(--clr-btn) !important;
-    transition: .75s;
+    transition: .35s;
     text-decoration: none;
     border-radius: .4em !important;
 }
 
 .regbtn-fill {
     color: var(--clr-textBtn) !important;
-    transition: .75s;
+    transition: .35s;
     border-radius: .4em !important;
     text-decoration: none;
 }
