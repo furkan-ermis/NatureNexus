@@ -11,6 +11,7 @@
     .header {
         height: 45px !important;
     }
+
     .nav {
         margin-right: 0 !important;
     }
@@ -27,7 +28,7 @@
         user-select: none;
     }
 
-    .nav, .register {
+    .nav, .registerBtn {
         display: none
     }
 
@@ -48,9 +49,8 @@
         height: 32px;
         position: absolute;
         cursor: pointer;
-        opacity: 0; 
-        z-index: 2; 
-
+        opacity: 0;
+        z-index: 2;
         -webkit-touch-callout: none;
     }
 

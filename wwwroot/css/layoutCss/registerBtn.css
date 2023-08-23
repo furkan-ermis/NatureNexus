@@ -1,24 +1,53 @@
-﻿.register li:last-child a {
-    margin-left: 10px;
+﻿.registerBtn {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+    .registerBtn li {
+        list-style: none !important;
+    }
+
+.fill:hover,
+.fill:focus {
+    box-shadow: inset 0 0 0 2em var(--clr-textBtn);
+}
+
+.close:hover,
+.close:focus {
+    box-shadow: inset -3.5em 0 0 0 var(--clr-btn), inset 3.5em 0 0 0 var(--clr-btn);
+}
+
+.regbtn-close {
     color: var(--clr-btn) !important;
-    border-radius: 4px;
-    padding: 8px 20px !important;
-    border: solid .2em var(--clr-btn);
+    transition: .75s;
+    text-decoration: none;
+    border-radius: .4em !important;
 }
 
-    .register li:last-child a:hover {
-        color: var(--clr-textWhite) !important;
-        background-color: var(--clr-btn) !important;
-    }
-
-.register li:first-child a {
+.regbtn-fill {
     color: var(--clr-textBtn) !important;
-    border-radius: 4px;
-    padding: 8px 20px !important;
-    border: solid .2em var(--clr-textBtn);
+    transition: .75s;
+    border-radius: .4em !important;
+    text-decoration: none;
 }
 
-    .register li:first-child a:hover {
-        color: var(--clr-header) !important;
-        background-color: var(--clr-textBtn) !important;
+    .regbtn-fill:hover, .regbtn-fill:focus {
+        border-color: var(--clr-textBtn);
+        border-radius: 0 !important;
+        color: var(--clr-bg) !important;
     }
+
+.regbtn-close:hover, .regbtn-close:focus {
+    border-color: var(--clr-btn);
+    border-radius: 0 !important;
+    color: var(--clr-bg) !important;
+}
+
+.regbtn {
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 1.2em 0.5em;
+    padding: .2em .8em;
+}

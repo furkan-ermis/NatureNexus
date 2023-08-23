@@ -17,11 +17,21 @@ namespace NatureNexus.Controllers
         {
             return View();
         }
-
+        public ActionResult GetCurrentDate()
+        {
+            string currentDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            return Content(currentDate);
+        }
         public IActionResult Privacy()
         {
             return View();
         }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
