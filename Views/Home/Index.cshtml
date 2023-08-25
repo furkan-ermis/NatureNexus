@@ -3,7 +3,7 @@
     ViewData["Style"] = "Index.css";
 }
 @*--- Bootstrap Carousel ----*@
-<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<section id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="container">
@@ -13,6 +13,7 @@
                             ZhangJiaJie National Park
                         </h1>
                         <p class="lead text-white fade-in">Giant sandstone pinnacles rise skyward from the valley floor, some up to 200m tall with tufts of evergreen shrubs clinching to their narrow summits.</p>
+                        <a asp-action="Place" asp-controller="Destination" class="carouselBtn btnMore">Daha Fazlası</a>
                     </div>
                 </div>
             </div>
@@ -23,6 +24,7 @@
                     <div class="col-md-6 text-center">
                         <h1 class="display-1 fw-bold text-white fade-in">ICEBERGS</h1>
                         <p class="lead text-white fade-in">Icebergs are fundamental to Greenland. Experience colossal icebergs grounded in the Ilulissat Icefjord or find them along Greenland’s coastline like floating sculptures.</p>
+                        <a asp-action="Place" asp-controller="Destination" class="carouselBtn btnMore">Daha Fazlası</a>
                     </div>
                 </div>
 
@@ -34,6 +36,7 @@
                     <div class="col-md-6 text-center">
                         <h1 class="display-1 fw-bold text-white fade-in">Cappadocia </h1>
                         <p class="lead text-white fade-in">The secret of Cappadocia is hidden with the geographical formations dating back to 60 million years.</p>
+                        <a asp-action="Place" asp-controller="Destination" class="carouselBtn btnMore">Daha Fazlası</a>
                     </div>
                 </div>
 
@@ -49,6 +52,60 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>
-</div>
+</section>
 @*--- Long Cards----*@
+<section class="container">
+   <article class="longCards">
+        <h1>Plan Your Trip</h1>
+        <div class="longCard">
+            <div class="cardImage Image1">
+                
+            </div>
+            <div>
+                <h3>Lorem Ipsum dolor</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad
+                </p>
+                <a asp-action="Place" asp-controller="Destination" class="btnMore"> Daha Fazlası..</a>
+            </div>
+        </div>
+        <div class="longCard">
+            <div class="cardImage Image2">
+                
+            </div>
+            <div>
+                <h3>Lorem Ipsum dolor</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad
+                </p>
+                <a asp-action="Place" asp-controller="Destination" class="btnMore"> Daha Fazlası..</a>
+            </div>
+        </div>
+        <div class="longCard">
+            <div class="cardImage Image3">
+                
+            </div>
+            <div>
+                <h3>Lorem Ipsum dolor</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad
+                </p>
+                <a asp-action="Place" asp-controller="Destination" class="btnMore"> Daha Fazlası..</a>
+            </div>
+        </div>
+        <div class="longCard">
+            <div class="cardImage Image4">
+                
+            </div>
+            <div>
+                <h3>Lorem Ipsum dolor</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad
+                </p>
+                <a asp-action="Place" asp-controller="Destination" class="btnMore"> Daha Fazlası..</a>
+            </div>
+        </div>
 
+
+   </article>
+</section>

@@ -127,6 +127,8 @@
     @await RenderSectionAsync("Scripts", required: false)
 
     <script>
+        @*    --------------- DATE AJAX --------------- *@
+
         $(document).ready(function () {
             function updateCurrentDate() {
                 $.ajax({
@@ -143,21 +145,22 @@
             // 1 saniyede bir tarih ve saat güncellemesi yap
             setInterval(updateCurrentDate, 1000);
         });
-    </script>
-    <script>
-        $("#sendHelp").click(function () {
+
+        @*    --------------- POP UP SCRIPT ---------------*@
+            $("#sendHelp").click(function () {
             $("#popup").fadeIn();
-            $(".header,.mainfooter,.contactBox").css("display", "none");
+            $(".header,.mainfooter,.contactBox,.paper,.cardWrapper,.carousel,.longCards").css("display", "none");
         });
 
         $(".close-popUp, #closePopup, #popup").click(function (e) {
             if (e.target === this || $(e.target).hasClass("close") || $(e.target).attr("id") === "closePopup") {
                 $("#popup").fadeOut();
                 $(".header,.mainfooter").css("display", "flex");
-                $(".contactBox").css("display", "block");
+                $(".contactBox,.paper,.cardWrapper,.carousel,.longCards").css("display", "block");
 
             }
         });
     </script>
+
 </body>
 </html>

@@ -1,5 +1,4 @@
-﻿/*---------- Carousel -------------
-*/
+﻿/*---------- Carousel -------------*/
 
 #carouselExampleCaptions {
 }
@@ -52,5 +51,103 @@
 @media (max-width: 576px) {
     #carouselExampleCaptions .carousel-item {
         height: 100vh;
+    }
+}
+
+.carouselBtn {
+    width: 200px;
+    height: 60px;
+    font-size: 1.5em;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*---------- LONG Cards -------------*/
+.longCards {
+    display: block;
+    padding-inline: 7em;
+    text-align: center;
+}
+
+.longCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 1em;
+    padding: 4em;
+    box-shadow: 3px 1px 4px 1px rgba(0,0,0,0.3);
+}
+
+    .longCard:nth-child(2n+1) {
+        flex-direction: row-reverse;
+    }
+
+    .longCard div:first-child {
+        width: 500px;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .longCard div:last-child {
+        width: 500px;
+        text-align: left;
+        letter-spacing: 2px;
+    }
+
+.Image1 {
+    background-image: url("https://images.unsplash.com/photo-1506773090264-ac0b07293a64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1936&q=80");
+}
+
+.Image2 {
+    background-image: url("https://wallpapers.com/images/featured/cappadocia-fxpe2j47rf7rmbmi.jpg");
+}
+
+.Image3 {
+    background-image: url("https://www.hdwallpaperspulse.com/wp-content/uploads/2020/02/mountain-HD-Antarctica-Wallpapers.jpg");
+}
+
+.Image4 {
+    background-image: url("https://images.unsplash.com/photo-1592183075437-13a5af4dd779?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1888&q=80");
+}
+
+.longCard .cardImage {
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+}
+
+.btnMore {
+    background-color: var(--clr-header);
+    color: var(--clr-bg);
+    border: none;
+    padding: .6em .5em !important;
+    transition: ease-in-out 300ms;
+    box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.32);
+}
+
+    .btnMore:hover {
+        background-color: var(--clr-btn);
+        box-shadow: 1px 1px 8px 1px rgba(0,0,0,0.6);
+    }
+
+@media screen and (max-width:860px) {
+    .longCard {
+        display: block;
+    }
+
+        .longCard:nth-child(2n+1) {
+            flex-direction: row;
+        }
+
+    .longCards {
+        padding: 10px;
+        text-align: left;
+    }
+
+    .longCard div:first-child {
+        width: 400px;
     }
 }

@@ -8,5 +8,9 @@ namespace NatureNexus.Controllers
         {
             return View();
         }
+        public IActionResult Place()
+        {
+            return View();
+        }
     }
 }
