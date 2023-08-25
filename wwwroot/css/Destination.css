@@ -1,0 +1,111 @@
+﻿/*---------Cards----------------*/
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+@media screen and (max-width:1400px) {
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .card {
+        height: 300px;
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+        height: 200px;
+    }
+
+    .content {
+        padding-block: 1em;
+    }
+}
+
+@media screen and (max-width:770px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+        height: 200px;
+    }
+
+    .content p {
+        font-size: 10px !important;
+        padding: .2em 0 !important;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+
+    .content {
+        padding: 3em 1em !important;
+    }
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 0 !important;
+}
+
+    .card img {
+        height: 300px;
+        transition: all 800ms;
+    }
+
+.content {
+    padding: 2em 2em;
+    position: absolute;
+    color: var(--clr-bg);
+    font-size: 16px !important;
+    bottom: -40em;
+    transition: all 500ms;
+    background-color: rgba(0,0,0,0.6);
+}
+
+    .content > h3 {
+        color: var(--clr-textBtn)
+    }
+
+.card:hover {
+    box-shadow: 2px 20px 20px rgba(0, 0, 0, 0.46);
+}
+
+    .card:hover > img {
+        transform: scale(1.3);
+    }
+
+    .card:hover > .content {
+        position: absolute;
+        bottom: 0;
+    }
+
+.btnMore {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    background-color: var(--clr-header);
+    color: var(--clr-bg);
+    border: none;
+    padding: .6em .5em !important;
+    transition: ease-in-out 400ms;
+    box-shadow: 1px 1px 3px 1px rgba(255,255,255,0.32);
+}
+
+    .btnMore:hover {
+        background-color: var(--clr-btn);
+        box-shadow: 1px 1px 8px 1px rgba(255,255,255,0.6);
+    }

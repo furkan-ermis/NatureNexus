@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="~/NatureNexus.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap" rel="stylesheet">
@@ -84,8 +84,8 @@
                 <div id="popup" class="popup">
                     <div class="popup-content">
                         <span class="close-popUp">&times;</span>
-                        <p>I need assistance!</p>
-                        <button id="closePopup">Close</button>
+                        <p>Bilgilendirme İçin Mail Üzeinden Dönüş Sağlanacaktır.</p>
+                        <button id="closePopup">Tamam</button>
                     </div>
                 </div>
             </div>
@@ -107,13 +107,13 @@
         </section>
         <section >
             <ul class="footer-social-media">
-                <li><a class="nav-link" href="https://medium.com/@@furkan.ermis" target="_blank"  title="Medium"><i  class="fa-brands fa-medium fa-2x bevel"></i></a></li>
-                <li><a class="nav-link" href="https://www.linkedin.com/in/-furkanermis/" target="_blank" title="Linkedin"><i class="fa-brands fa fa-linkedin fa-2x bevel"></i></a></li>
-                <li><a class="nav-link" href="https://www.instagram.com/furkanermis/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram fa-2x bevel"></i></a></li>
-                <li><a class="nav-link" href="https://twitter.com/?lang=tr" target="_blank" title="Twitter"><i class="fa-brands fa-square-x-twitter fa-2x bevel"></i></a></li>
+                <li><a class="nav-link" href="https://medium.com/@@furkan.ermis" target="_blank"  title="Medium"><i  class="fa-brands fa-medium fa-2x links"></i></a></li>
+                <li><a class="nav-link" href="https://www.linkedin.com/in/-furkanermis/" target="_blank" title="Linkedin"><i class="fa-brands fa fa-linkedin fa-2x links"></i></a></li>
+                <li><a class="nav-link" href="https://www.instagram.com/furkanermis/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram fa-2x links"></i></a></li>
+                <li><a class="nav-link" href="https://twitter.com/?lang=tr" target="_blank" title="Twitter"><i class="fa-brands fa-square-x-twitter fa-2x links"></i></a></li>
             </ul>
             <div id="copyright">
-                &copy; <span style="font-weight:bold;color:var(--clr-header)" id="currentDate"> @DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")</span>  - Journey Peak - @ViewData["Title"] -> <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy Policy</a>
+                &copy; <span style="font-weight:bold;color:var(--clr-header)" id="currentDate"> @DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")</span>  - Journey Peak - @ViewData["Title"] -> <a class="prvicy" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy Policy</a>
             </div>
 
         </section>
@@ -147,13 +147,14 @@
     <script>
         $("#sendHelp").click(function () {
             $("#popup").fadeIn();
-            $(".header,.mainfooter").css("display","none");
+            $(".header,.mainfooter,.contactBox").css("display", "none");
         });
 
         $(".close-popUp, #closePopup, #popup").click(function (e) {
             if (e.target === this || $(e.target).hasClass("close") || $(e.target).attr("id") === "closePopup") {
                 $("#popup").fadeOut();
                 $(".header,.mainfooter").css("display", "flex");
+                $(".contactBox").css("display", "block");
 
             }
         });

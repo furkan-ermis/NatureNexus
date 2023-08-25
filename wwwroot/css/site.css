@@ -1,6 +1,7 @@
 ﻿:root {
     --clr-main: #388E3C;
     --clr-header: #064635;
+    --clr-body: #4e4034;
     --clr-bg-main: #F1FDF3;
     --clr-textDark: #616161;
     --clr-textWhite: #F1FDF3;
@@ -94,7 +95,7 @@ html {
     padding-block: 2em;
     align-items: center;
     color: var(--clr-bg);
-    background-color: var(--clr-header);
+    background-color: var(--clr-body);
 }
 
     .sidefooter section {
@@ -144,33 +145,51 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: black;
     z-index: 111;
 }
 
 .popup-content {
-    background-color: white;
+    background-color: var(--clr-header);
     width: 50%;
     margin: 10% auto;
-    padding: 20px;
+    padding: 50px;
     position: relative;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    z-index: 11;
+    border-radius: 10px 100px / 120px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+    z-index: 111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .close-popUp {
-    z-index: 11;
+    z-index: 12;
+    color: darkred;
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
+    top: -30px;
+    right: 0px;
+    font-size: 3em;
     cursor: pointer;
 }
 
+    .close-popUp:hover {
+        color: var(--clr-textBtn)
+    }
+
 #closePopup {
+    background-color: var(--clr-btn);
+    border: white solid 1px;
+    border-radius: 6px;
     z-index: 11;
-    margin-top: 10px;
+    padding: .1em 1em;
+    margin-block: .2em;
 }
+
+    #closePopup:is(:hover,:focus) {
+        opacity: .8;
+    }
 /*----------------FOOTER---------------------------------*/
 .mainfooter {
     display: flex;
@@ -186,6 +205,38 @@ html {
         justify-content: space-between;
     }
 
+
+    .sidefooter {
+        gap: 1em;
+        padding-block: 1em;
+        flex-direction: column;
+    }
+
+        .sidefooter section:last-child {
+            opacity: 1;
+            width: 250px;
+        }
+
+            .sidefooter section:last-child:hover {
+                opacity: .86;
+            }
+
+        .sidefooter section input {
+            width: 200px;
+        }
+
+    .mailIcon {
+        color: var(--clr-btn) !important;
+        cursor: pointer;
+    }
+
+        .mailIcon:is(:hover,:focus) {
+            color: var(--clr-textBtn);
+            font-size: 1.1em;
+        }
+
+
+
     .header-logo img {
         width: 75px !important;
         height: 55px !important;
@@ -199,9 +250,7 @@ html {
         display: block;
     }
 
-    .sidefooter {
-        display: none;
-    }
+
 
     .footerLogo img {
         width: 130px !important;
@@ -219,7 +268,6 @@ html {
     padding-inline: 6em;
     border-right: solid 1px lightgray;
 }
-
 
 
     .footerLogo img {
@@ -278,11 +326,19 @@ html {
     }
 
 
-.bevel {
+.links {
     text-shadow: 1px 1px 1px #555, -1px -1px 1px #000;
     color: var(--clr-header);
 }
 
-    .bevel:hover, .bevel:focus {
+    .links:hover, .bevel:focus {
         color: var(--clr-btn)
+    }
+
+.prvicy {
+    color: var(--clr-btn);
+}
+
+    .prvicy:hover {
+        color: var(--clr-body);
     }

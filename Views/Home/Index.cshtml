@@ -1,9 +1,54 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    ViewData["Style"] = "Index.css";
 }
-<div class="container">
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@*--- Bootstrap Carousel ----*@
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-6 text-center">
+                        <h1 class="display-1 fw-bold text-white fade-in">
+                            ZhangJiaJie National Park
+                        </h1>
+                        <p class="lead text-white fade-in">Giant sandstone pinnacles rise skyward from the valley floor, some up to 200m tall with tufts of evergreen shrubs clinching to their narrow summits.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-6 text-center">
+                        <h1 class="display-1 fw-bold text-white fade-in">ICEBERGS</h1>
+                        <p class="lead text-white fade-in">Icebergs are fundamental to Greenland. Experience colossal icebergs grounded in the Ilulissat Icefjord or find them along Greenland’s coastline like floating sculptures.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-6 text-center">
+                        <h1 class="display-1 fw-bold text-white fade-in">Cappadocia </h1>
+                        <p class="lead text-white fade-in">The secret of Cappadocia is hidden with the geographical formations dating back to 60 million years.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
-</div>
+@*--- Long Cards----*@
+
