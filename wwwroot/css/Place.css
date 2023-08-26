@@ -1,40 +1,203 @@
-﻿h1.testimonials-header {
-    font-family: "Univers57-Condensed", sans-serif;
-    font-size: 18pt;
-    line-height: 1.1;
-    text-transform: uppercase;
-    font-weight: normal;
-    padding: 6px;
-}
-
-section#home-reviews {
-    margin: 50px 6px 70px 6px;
-    padding: 100px 0;
-    font-family: "Univers57-Condensed", sans-serif;
-    color: #5d564f;
-    background: #f7f7f7;
-    justify-content: center;
+﻿
+/*-------------------- MainBg --------------------*/
+.mainBg {
+    background-image: url("https://www.pixelstalk.net/wp-content/uploads/images6/Northern-Lights-Wallpaper-High-Quality.jpg");
+    width: 99.2vw;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
     display: flex;
+    justify-content: center;
+    align-items: center
 }
 
-    section#home-reviews h2 {
-        font-size: 1.75rem;
-        text-transform: uppercase;
-        margin-bottom: 50px;
+.header {
+    background-color: black !important;
+    opacity: .6;
+    transition: all 300ms;
+}
+
+    .header:hover {
+        background-color: black !important;
+        opacity: 1;
+        height: 80px;
     }
 
-.fa-quote-left {
-    padding-right: 10px;
+h1::selection, p::selection, h2::selection, h3::selection, h4::selection {
+    color: #fff;
+    background: #BD242B;
 }
 
-.fa-quote-right {
-    padding-left: 10px;
+.queto {
+    width: 900px;
+    padding: 1.1em;
 }
 
-section#home-reviews p {
-    font-size: 13pt;
+h1, h2, h3 {
+    font-family: 'a Attack Graffiti';
 }
 
-.stars {
-    color: #BB8B41;
+.queto h1 {
+    font-size: 5em;
+    letter-spacing: 2px;
+    color: var(--clr-bg)
+}
+
+.queto p {
+    text-align: center;
+    width: 700px;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    font-family: 'Bookman Old Style';
+    color: var(--clr-bg)
+}
+/*----------------------- About Place --------------*/
+
+.aboutPlace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--clr-textWhite);
+    margin-block: 2em;
+}
+
+    .aboutPlace h2 {
+        text-align: center;
+        font-family: 'a Attack Graffiti';
+        padding: 1em 5em;
+        font-size: 2.2em;
+        letter-spacing: 3px;
+    }
+
+    .aboutPlace .aboutPraph {
+        font-family:;
+        padding: 1em 7em;
+        font-size: 1.1em;
+        letter-spacing: 3px;
+    }
+
+
+.quotePraph {
+    font-family: 'Leelawadee UI';
+    width: 550px;
+    font-weight: lighter;
+    padding-block: .4em;
+    letter-spacing: 3px;
+}
+
+/*----------------------- About Place 2 --------------*/
+.moreAbout {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100vw;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+    .moreAbout h2 {
+        padding-block: 1em;
+    }
+
+.leftAbout {
+    width: 100%;
+    background-color: var(--clr-bg);
+    padding: 3em 8em;
+}
+
+.rightAbout {
+    padding: 5em 8em;
+    color: var(--clr-bg2);
+    width: 100%;
+    background-color: var(--clr-body);
+}
+
+.moreImage {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    overflow: hidden;
+}
+
+    .moreImage img {
+        height: 600px;
+        width: 100%;
+        transition: all ease-in-out 400ms;
+    }
+
+        .moreImage img:hover {
+            transform: scale(1.1)
+        }
+/*----------------------- Responsive --------------*/
+@media (max-width:1000px) {
+    h1, h2, h3 {
+        font-size: 3em !important;
+    }
+
+    p {
+        font-size: .9em !important;
+    }
+
+    .queto {
+    width:300px;
+    }
+    .queto p {
+        width: 300px;
+    }
+
+    .aboutPlace .aboutPraph {
+        padding: .5em;
+    }
+
+    .moreAbout {
+        font-size: 12px !important;
+    }
+
+    .leftAbout {
+        padding: 2em 4em;
+    }
+
+    .moreImage {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
+    }
+
+        .moreImage img {
+            height: 450px;
+            width: 100%;
+            transition: all ease-in-out 400ms;
+        }
+}
+
+@media (max-width:650px) {
+    .quotePraph {
+        width: 400px;
+    }
+    h1, h2, h3 {
+        font-size: 2em !important;
+    }
+    .moreAbout {
+        display: block;
+    }
+
+    .leftAbout {
+        padding: 2em 4em;
+    }.rightAbout {
+        padding: 2em 4em;
+    }
+
+    .moreImage {
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow: hidden;
+    }
+
+        .moreImage img {
+            height: 450px;
+            width: 100%;
+            transition: all ease-in-out 400ms;
+        }
 }

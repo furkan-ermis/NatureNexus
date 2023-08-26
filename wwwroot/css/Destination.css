@@ -107,5 +107,6 @@
 
     .btnMore:hover {
         background-color: var(--clr-btn);
+        color: var(--clr-bg);
         box-shadow: 1px 1px 8px 1px rgba(255,255,255,0.6);
     }

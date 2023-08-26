@@ -52,6 +52,17 @@
     #carouselExampleCaptions .carousel-item {
         height: 100vh;
     }
+
+    .longCards {
+        padding-inline: 0em;
+        overflow: hidden;
+    }
+
+    .longCard {
+        padding: 0em !important;
+        margin-block: .9em;
+        padding-block: 1em !important;
+    }
 }
 
 .carouselBtn {
@@ -77,6 +88,7 @@
     align-items: center;
     flex-direction: row;
     gap: 1em;
+    overflow: hidden;
     padding: 4em;
     box-shadow: 3px 1px 4px 1px rgba(0,0,0,0.3);
 }
@@ -117,6 +129,7 @@
     background-attachment: fixed;
     background-position: top;
     background-size: cover;
+    overflow: hidden;
 }
 
 .btnMore {
@@ -130,6 +143,7 @@
 
     .btnMore:hover {
         background-color: var(--clr-btn);
+        color: var(--clr-bg) !important;
         box-shadow: 1px 1px 8px 1px rgba(0,0,0,0.6);
     }
 
