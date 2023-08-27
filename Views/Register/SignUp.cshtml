@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "Kayıt Ol";
+    ViewData["Style"] = "SignUp.css";
+}
+
+<div class="registerwrapper container">
+    <div class="registerCard">
+        <h3>@ViewData["Title"] </h3>
+        <form asp-action="" id="">
+            <div asp-validation-summary="ModelOnly" style="color:red;font-size:7px;"></div>
+            <div class="name">
+                <div class="field">
+                    <input type="text" placeholder="Adınızı Giriniz" />
+                    <span style="color:red;font-size:7px;"></span>
+                </div>
+                <div class="field">
+                    <input type="text" placeholder="Soyadınızı Giriniz" />
+                    <span style="color:red;font-size:7px;"></span>
+                </div>
+            </div>
+            <div class="field">
+                <input type="email" placeholder="Mail Adresinizi Giriniz" />
+                <span style="color:red;font-size:7px;"></span>
+            </div>
+            <div class="field">
+                <input type="password" placeholder="Şifrenizi Giriniz" />
+                <span style="color:red;font-size:7px;"></span>
+            </div>
+            <div class="field">
+                <input type="password" placeholder="Şifrenizi Tekrar Giriniz" />
+                <span style="color:red;font-size:7px;"></span>
+            </div>
+            <div class="field">
+                <input type="submit" class="formBtn" value="Kayıt Ol" />
+                <span style="color:red;font-size:7px;"></span>
+            </div>
+        </form>
+        <div class="haveAccount">
+            <a asp-action="LogIn" asp-controller="Register">Zaten Bir Hesabım Var</a>
+        </div>
+    </div>
+</div>

@@ -2,8 +2,7 @@
 
 
 .main {
-    outline: none;
-    background-image: url("https://images.unsplash.com/photo-1516528387618-afa90b13e000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80");
+    background-image: url("https://images.unsplash.com/photo-1573615185495-3d4dba4d5dd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -55,7 +54,14 @@ input, textarea {
     margin-bottom: 1em;
     transition: all 200ms;
 }
+.field input,textarea{
+    outline: none;
 
+}
+.field input:focus,textarea:focus{
+    background-color:rgba(255,255,255,0.3)
+
+}
     .formBtn:is(:hover,:focus) {
         opacity: .8;
         box-shadow: 3px -1px 14px 2px rgba(240,240,240,.3);

@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Giriş Yap ";
+    ViewData["Style"] = "LogIn.css";
+}
+<div class="registerwrapper container"> 
+    <div class="registerCard">
+        <h3>@ViewData["Title"] </h3>
+        <form asp-action="" id="">
+            <div asp-validation-summary="ModelOnly" style="color:red;font-size:7px;"></div>
+            <div class="field">
+                <input type="email" placeholder="Mail Adresinizi Giriniz" />
+                <span style="color:red;font-size:7px;"></span>
+                </div>
+            <div class="field">
+                <input type="password" placeholder="Şifrenizi Giriniz" />
+                <span style="color:red;font-size:7px;"></span>
+            </div>
+            <div class="field">
+                <input type="submit" class="formBtn" value="Giriş Yap" />
+                <span style="color:red;font-size:7px;"></span>
+            </div>
+        </form>
+        <div class="rememberForget">
+            <div class="rememberMe">
+                <input type="checkbox"  /> <span> Beni Hatırla</span>
+            </div>
+            <div class="forgetPassword">
+                <a href=""  >Şifremi Unuttum</a> 
+            </div>
+        </div>
+        <div class="noAccount">
+            <a asp-action="SignUp" asp-controller="Register">Bir Hesabım Yok</a>
+        </div>
+    </div>
+</div>

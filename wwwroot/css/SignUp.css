@@ -1,0 +1,74 @@
+﻿body {
+    background: url("https://images.unsplash.com/photo-1573615185495-3d4dba4d5dd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80") no-repeat;
+    background-position-y: 10%;
+    background-size: cover;
+}
+
+.registerwrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registerCard {
+    padding: 2.2em;
+    margin: 3em 0;
+    text-align: center;
+    box-shadow: 10px 20px 20px 20px rgba(0,0,0,0.3);
+    backdrop-filter: blur(15px);
+}
+
+h3 {
+    color: var(--clr-header);
+}
+
+.field {
+    margin-block: 1em;
+}
+.name{
+    display:flex;
+    gap:1em;
+}
+form input {
+    width:100%;
+    outline: solid 1px var(--clr-header);
+    border: none;
+    border-radius: 6px;
+    padding: .8em 2em;
+    background-color: transparent;
+    box-shadow: 1px 2px 20px 2px rgba(0,0,0,0.3);
+}
+
+input:focus {
+    background-color: rgba(255,255,255,0.5);
+}
+
+input[type="submit"] {
+    border: solid 2px var(--clr-btn);
+    outline: none;
+    background-color: transparent;
+    color: var(--clr-textWhite);
+    transition: all ease 200ms;
+}
+
+    input[type="submit"]:hover {
+        background-color: var(--clr-btn);
+    }
+
+.rememberForget {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.rememberMe {
+    color: var(--clr-textWhite)
+}
+
+.registerCard a {
+    color: var(--clr-textWhite);
+}
+
+    .registerCard a:hover {
+        color: var(--clr-btn)
+    }
