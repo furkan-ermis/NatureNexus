@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NatureNexus.Models;
+using Org.BouncyCastle.Crypto.Macs;
 using System.Diagnostics;
 
 namespace NatureNexus.Controllers
@@ -17,6 +18,8 @@ namespace NatureNexus.Controllers
         {
             return View();
         }
+
+        //-----------Footer Tarih Fonksiyonu-------
         public ActionResult GetCurrentDate()
         {
             string currentDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -26,10 +29,28 @@ namespace NatureNexus.Controllers
         {
             return View();
         }
-
+        [HttpGet]
         public IActionResult Contact()
         {
             return View();
+        }
+
+        [HttpPost]
+        // --------- İletişim İçin Mail Gönderimi --------------
+        public IActionResult Contact(ContactViewModel contactViewModel)
+        {
+            string feedBack = "Geri Bildirim İçin Teşekkürler";
+            string feedBackMessage = "Ekibimizden Biri En Yakın Zamanda Sizinle İletişime Geçecektir Teşekkür Ederiz.";
+
+            new SendMail(contactViewModel.Mail, "10webapp10@gmail.com", "mnvvwljcchhtsaig", "Admin-NatureNexus", contactViewModel.Name, feedBack, feedBackMessage);
+            new SendMail("10webapp10@gmail.com", "10webapp10@gmail.com", "mnvvwljcchhtsaig", "Admin-NatureNexus", contactViewModel.Name, "Bir Bildiriminiz Var", contactViewModel.Message);
+            return View("Index");
+        }
+        [HttpPost]
+        public IActionResult NeedHelpMail(string sendmail)
+        {
+            new SendMail(sendmail, "10webapp10@gmail.com", "mnvvwljcchhtsaig", "Admin-NatureNexus", "User", "Bir Bildiriminiz Var", "Kullanıcı Yardım İstedi");
+            return View("Index");
         }
         public IActionResult About()
         {

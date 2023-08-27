@@ -1,4 +1,4 @@
-﻿
+﻿@model UserSignUpViewModel
 @{
     ViewData["Title"] = "Kayıt Ol";
     ViewData["Style"] = "SignUp.css";
@@ -7,32 +7,36 @@
 <div class="registerwrapper container">
     <div class="registerCard">
         <h3>@ViewData["Title"] </h3>
-        <form asp-action="" id="">
+        <form asp-action="SignUp" id="">
             <div asp-validation-summary="ModelOnly" style="color:red;font-size:7px;"></div>
             <div class="name">
                 <div class="field">
-                    <input type="text" placeholder="Adınızı Giriniz" />
-                    <span style="color:red;font-size:7px;"></span>
+                    <input asp-for="Name"  type="text" placeholder="Adınızı Giriniz" />
+                    <span asp-validation-for="Name" style="color:red;"></span>
                 </div>
                 <div class="field">
-                    <input type="text" placeholder="Soyadınızı Giriniz" />
-                    <span style="color:red;font-size:7px;"></span>
+                    <input asp-for="Surname"  type="text" placeholder="Soyadınızı Giriniz" />
+                    <span asp-validation-for="Surname" style="color:red;"></span>
                 </div>
             </div>
+                <div class="field">
+                <input asp-for="Username"  type="text" placeholder="Kullanıcı Adınızı" />
+                <span asp-validation-for="Username" style="color:red;"></span>
+                </div>
             <div class="field">
-                <input type="email" placeholder="Mail Adresinizi Giriniz" />
-                <span style="color:red;font-size:7px;"></span>
+                <input asp-for="Email" type="email"  placeholder="Mail Adresinizi Giriniz" />
+                <span asp-validation-for="Email" style="color:red;"></span>
             </div>
             <div class="field">
-                <input type="password" placeholder="Şifrenizi Giriniz" />
-                <span style="color:red;font-size:7px;"></span>
+                <input asp-for="Password" type="password"  placeholder="Şifrenizi Giriniz" />
+                <span asp-validation-for="Password" style="color:red;"></span>
             </div>
             <div class="field">
-                <input type="password" placeholder="Şifrenizi Tekrar Giriniz" />
-                <span style="color:red;font-size:7px;"></span>
+                <input asp-for="ConfirmPassword" type="password" placeholder="Şifrenizi Tekrar Giriniz" />
+                <span asp-validation-for="ConfirmPassword" style="color:red;"></span>
             </div>
             <div class="field">
-                <input type="submit" class="formBtn" value="Kayıt Ol" />
+                <input type="submit" class="formBtn" />
                 <span style="color:red;font-size:7px;"></span>
             </div>
         </form>

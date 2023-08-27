@@ -1,4 +1,4 @@
-﻿
+﻿@model ContactViewModel
 @{
     ViewData["Title"] = "Contact";
     ViewData["Style"] = "Contact.css";
@@ -12,19 +12,19 @@
             Söğütlü Çeşme Cd, <br />34714 Kadıköy/İstanbul
         </h5>
         <h5>(555) 345-6789</h5>
-        <form asp-action="" id="">
+        <form asp-action="Contact" id="">
             <div asp-validation-summary="ModelOnly" style="color:red;font-size:7px;"></div>
 
             <div class="field">
-                <input type="text" placeholder="Adınızı Giriniz" />
+                <input asp-for="Name" type="text" placeholder="Adınızı Giriniz" />
                 <span style="color:red;font-size:7px;"></span>
             </div>
             <div class="field">
-                <input type="text" placeholder="Mail Adresinizi Giriniz" />
+                <input asp-for="Mail" type="text" placeholder="Mail Adresinizi Giriniz" />
                 <span style="color:red;font-size:7px;"></span>
             </div>
             <div class="field">
-                <textarea rows="4" cols="50" placeholder="Mesajınızı Giriniz..."></textarea>
+                <textarea asp-for="Message" rows="4" cols="50" placeholder="Mesajınızı Giriniz..."></textarea>
                 <span style="color:red;font-size:7px;"></span>
             </div>
             <div class="field">

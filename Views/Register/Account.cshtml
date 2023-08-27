@@ -1,0 +1,31 @@
+﻿@model AppUser
+@{
+    ViewData["Title"] = "Account";
+    ViewData["Style"] = "Account.css";
+}
+<div class="wrap">
+
+
+<h1>Hesabım</h1>
+
+
+
+<hr />
+
+    <h3>
+        Kişisel Bilgiler
+    </h3>
+<div  class="m-3">
+    <div class="content fs-4">
+       
+            <span style="font-weight:bold" >Ad Soyad</span>
+            <div>@Html.DisplayFor(model => model.Name) @Html.DisplayFor(model => model.Surname)</div><br />
+            <span style="font-weight:bold">Kullanıcı Adı</span>
+            <div>@Html.DisplayFor(model => model.UserName) </div><br />
+            <span style="font-weight:bold">Mail Adresi</span>
+            <div>@Html.DisplayFor(model => model.Email) </div>
+            <a class="chngPasswordBtn" asp-action="ChangePassword" asp-controller="Register"> Şifremi Değiştir</a>
+
+    </div>
+</div>
+</div>

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims;
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -56,6 +58,20 @@
             <a asp-action="Contact" asp-controller="Home">İletişim</a>
             <div id="indicator"></div>
         </nav>
+
+         @if (User.FindFirstValue(ClaimTypes.NameIdentifier) != null)
+        {
+            <ul class="registerBtn">
+                <li>
+                    <a class="regbtn regbtn-fill fill" asp-action="Logout" asp-controller="Register">Çıkış Yap</a>
+                </li>
+                <li>
+                    <a class="regbtn regbtn-close close" asp-action="Account" asp-controller="Register" asp-route-id="@User.FindFirstValue(ClaimTypes.NameIdentifier)">Hesabım</a>
+                </li>
+            </ul>
+        }
+        else{
+
         <ul class="registerBtn">
             <li>
                 <a class="regbtn regbtn-fill fill" asp-action="LogIn" asp-controller="Register">Giriş Yap</a>
@@ -64,13 +80,16 @@
                 <a class="regbtn regbtn-close close" asp-action="SignUp" asp-controller="Register">Kayıt Ol</a>
             </li>
         </ul>
-            </header>
+        }
+
+    </header>
 
     <div class="wrapper">
         <main role="main" class="main pb-3" >
             @RenderBody()
         </main>
     </div>
+
     <footer class="sidefooter">
         <section>
             <p>
@@ -78,9 +97,10 @@
                 <br />Size ulaşmamız İçin <b>Mail Adresinizi</b> Girmeniz Yeterli..
             </p>
         </section>
-        <section>
-            <input type="search" placeholder="Email Adresinizi Giriniz" /><div style="display:inline-block">
-                <a id="sendHelp"  class="mailIcon fa-solid fa-envelope-circle-check"></a> 
+        <form asp-action="NeedHelpMail" asp-controller="Home">
+            <input type="search" name="sendmail" placeholder="Email Adresinizi Giriniz" />
+            <div style="display:inline-block">
+                <button type="submit" id="sendHelp" class="mailIcon fa-solid fa-envelope-circle-check"></button>
                 <div id="popup" class="popup">
                     <div class="popup-content">
                         <span class="close-popUp">&times;</span>
@@ -89,8 +109,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </form>
     </footer>
+
+
     <footer class="mainfooter">
         <section class="footerLogo">
             <a asp-action="Index" asp-controller="Home">

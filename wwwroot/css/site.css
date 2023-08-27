@@ -99,26 +99,26 @@ html {
     background-color: var(--clr-body);
 }
 
-    .sidefooter section {
+    .sidefooter form {
         box-shadow: 1px 2px 13px 5px rgba(0,0,0,0.25);
     }
 
-        .sidefooter section:first-child {
+        .sidefooter form:first-child {
             padding: 1em 4em;
         }
 
-        .sidefooter section:last-child {
+        .sidefooter form:last-child {
             opacity: .6;
             width: 290px;
             padding-right: 1em;
             background-color: var(--clr-textWhite);
         }
 
-            .sidefooter section:last-child:hover {
+            .sidefooter form:last-child:hover {
                 opacity: .86;
             }
 
-        .sidefooter section input {
+        .sidefooter form input {
             padding: 1.1em 2em;
             width: 250px;
             margin: 0 !important;
@@ -129,13 +129,17 @@ html {
         }
 
 .mailIcon {
+    display: inline-block;
     color: var(--clr-btn) !important;
     cursor: pointer;
+    outline: none !important;
+    font-size: .9em;
+    border:none;
 }
 
     .mailIcon:is(:hover,:focus) {
         color: var(--clr-textBtn);
-        font-size: 1.1em;
+        font-size:1em;
     }
 
 /*----------------SIDE - FOOTER - POPUP------------------*/

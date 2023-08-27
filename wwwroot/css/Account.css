@@ -1,0 +1,43 @@
+﻿
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5em 2em;
+    padding: 1em;
+    flex-direction: column;
+}
+
+.content {
+    box-shadow: 10px 10px 20px 20px rgba(0,0,0,0.3);
+    backdrop-filter: blur(15px);
+    background-color: black;
+    padding: 3em 0;
+    width: 450px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    .content > div {
+        color: white;
+    }
+
+    .content > span {
+        color: aliceblue;
+    }
+
+.chngPasswordBtn {
+    margin-block: 2em;
+    padding: .8em 1.2em;
+    color: white;
+    background-color: transparent;
+    border: 5px solid var(--clr-btn);
+}
+
+    .chngPasswordBtn:hover {
+        color: var(--clr-textWhite);
+        background-color: var(--clr-btn);
+    }
